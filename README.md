@@ -1,6 +1,13 @@
 # Proje Hakkında
 ### Veri Yapıları ve Algoritmaları konu almaktadır.
 
++  Ders 1 -> [Reference Type](https://youtu.be/qBNC9XlB7Bg?list=PLK37qYAhi0EfUz9ztgca3sJYn68FIxWxk&t=19)
++  Ders 2 -> [Value Type](https://youtu.be/93PmFh2P1lM?list=PLK37qYAhi0EfUz9ztgca3sJYn68FIxWxk&t=9)
++  Ders 3 -> [Record](https://youtu.be/pBUrPId4l5U?list=PLK37qYAhi0EfUz9ztgca3sJYn68FIxWxk&t=4)
++  Ders 4 -> [Ref And Out Keyword](https://youtu.be/nUGfsfHWg9E?list=PLK37qYAhi0EfUz9ztgca3sJYn68FIxWxk&t=2)
++  Ders 5 -> [Array](https://youtu.be/eAnSfhbupLI?list=PLK37qYAhi0EfUz9ztgca3sJYn68FIxWxk&t=9)
++  Ders 6 -> [Array Constructor](https://youtu.be/OjgEgcBfDdc?list=PLK37qYAhi0EfUz9ztgca3sJYn68FIxWxk&t=74)
+
 ###  **🙏** Teşekkürler 
 Projeyi eğitimini bizlere sunan [Zafer ÇÖMERT](https://www.linkedin.com/in/zafer-cömert-51000367)
 

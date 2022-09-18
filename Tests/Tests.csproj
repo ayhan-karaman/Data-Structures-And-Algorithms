@@ -21,7 +21,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Applications\ValueAndReferenceTypes\ValueAndReferenceTypes.csproj" />
+    <ProjectReference Include="..\Applications\ValueAndReferenceTypes\ValueAndReferenceTypes.csproj" />
+    <ProjectReference Include="..\DataStructures\Array\Array.csproj" />
   </ItemGroup>
 
 </Project>
