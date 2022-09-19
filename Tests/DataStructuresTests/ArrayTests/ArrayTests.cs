@@ -15,11 +15,54 @@ namespace ArrayTests
         [InlineData(256)]
         public void Check_Array_Constructor(int defaultSize)
         {
-            //Arrange || Act
-            var arr = new Array(defaultSize);
+            //Arrange - Act
+            var arr = new DataStructures.Array.Array(defaultSize);
             
             //Assert
             Assert.Equal(arr.Length, defaultSize);
+        }
+
+        [Fact]
+        public void Check_Array_Constructor_With_Params()
+        {
+            // Arrange - Act
+            var arr = new Array(1, 2, 3, 4, 5);
+
+            //Assert
+            Assert.Equal(5, arr.Length);
+            
+        }
+
+        [Fact]
+        public void Get_and_Set_Values_in_Array()
+        {
+            //Arrange
+            var arr = new Array();
+
+            // Act
+            arr.SetValue(28, 0);
+            arr.SetValue(55, 1);
+
+            //Assert
+            Assert.Equal(28, arr.GetValue(0));
+            Assert.Equal(55, arr.GetValue(1));
+            Assert.Null(arr.GetValue(2));
+
+        }
+
+        [Fact]
+        public void Array_Clone_Test()
+        {
+            //Arrenge
+            var arr = new Array(1, 2, 3);
+
+            // Act
+            var clonedArr = (Array)arr.Clone(); // || as Array;
+
+            //Assert
+            Assert.NotNull(clonedArr);
+            Assert.Equal(arr.Length, clonedArr.Length);
+            Assert.NotEqual(arr.GetHashCode(), clonedArr.GetHashCode());
         }
     }
 }

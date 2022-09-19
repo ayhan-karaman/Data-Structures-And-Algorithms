@@ -7,6 +7,9 @@
 +  Ders 4 -> [Ref And Out Keyword](https://youtu.be/nUGfsfHWg9E?list=PLK37qYAhi0EfUz9ztgca3sJYn68FIxWxk&t=2)
 +  Ders 5 -> [Array](https://youtu.be/eAnSfhbupLI?list=PLK37qYAhi0EfUz9ztgca3sJYn68FIxWxk&t=9)
 +  Ders 6 -> [Array Constructor](https://youtu.be/OjgEgcBfDdc?list=PLK37qYAhi0EfUz9ztgca3sJYn68FIxWxk&t=74)
++  Ders 7 -> [Array Construtor With Params](https://youtu.be/xFUJHUJlWxs?list=PLK37qYAhi0EfUz9ztgca3sJYn68FIxWxk&t=296)
++  Ders 8 -> [Array SetValue and GetValue](https://youtu.be/7gxXg6xvbUM?list=PLK37qYAhi0EfUz9ztgca3sJYn68FIxWxk&t=24)
++  Ders 9 -> [Array ICloneable](https://youtu.be/NIvYE8jLFaY?list=PLK37qYAhi0EfUz9ztgca3sJYn68FIxWxk&t=88)
 
 ###  **🙏** Teşekkürler 
 Projeyi eğitimini bizlere sunan [Zafer ÇÖMERT](https://www.linkedin.com/in/zafer-cömert-51000367)
