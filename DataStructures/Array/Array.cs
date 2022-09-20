@@ -1,11 +1,9 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Collections;
 
 namespace DataStructures.Array
 {
-    public class Array:ICloneable
+    public class Array: ICloneable, IEnumerable
     {
         private Object[] InnerArray { get; set; }
         public int Length => InnerArray.Length;
@@ -38,6 +36,12 @@ namespace DataStructures.Array
         public object Clone()
         {
             return MemberwiseClone();
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            //return InnerArray.GetEnumerator();
+            return new CustomeArrayEnumerator(InnerArray);
         }
     }
 }

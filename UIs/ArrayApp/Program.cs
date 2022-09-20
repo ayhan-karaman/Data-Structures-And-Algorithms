@@ -24,3 +24,9 @@ foreach (var item in arr)
 {
     Console.WriteLine(item);
 }
+Console.WriteLine("\n\n");
+var _arr = new DataStructures.Array.Array(1, 2, 3);
+foreach (var item in _arr)
+{
+    Console.WriteLine(item);
+}
