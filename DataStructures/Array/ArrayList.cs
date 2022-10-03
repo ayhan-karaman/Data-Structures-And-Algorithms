@@ -15,6 +15,13 @@ namespace DataStructures.Array
             position = 0;
 
         }
+        public ArrayList(IEnumerable collection)
+        {
+          foreach (var item in collection)
+          {
+            Add(item);
+          }   
+        }
         public void Add(Object value)
         {
             if(position == Length)

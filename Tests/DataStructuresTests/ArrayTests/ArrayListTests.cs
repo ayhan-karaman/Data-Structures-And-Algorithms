@@ -92,6 +92,37 @@ namespace Tests.DataStructuresTests.ArrayTests
             Assert.Equal("ab", s);
          }
 
+         [Fact]
+        public void ArrayList_Construtor_With_Enumerable_Test()
+        {
+            // arrenge
+            var list = new List<int>{1, 2, 3};
 
+            //act
+            var _arr = new ArrayList(list);
+            string str = "";
+            foreach (var item in _arr)
+            {
+                str += item;
+            }
+
+            // assert
+            Assert.Equal("123", str);
+        }
+        
+        [Fact]
+        public void IndexOf_Test()
+        {
+            //arrenge
+            _arrayList.Add("a");
+            _arrayList.Add("b");
+            _arrayList.Add("c");
+
+            // act
+           var result =  _arrayList.IndexOf("c");
+
+           // assert
+           Assert.Equal(2, result);
+        }
     }
 }
