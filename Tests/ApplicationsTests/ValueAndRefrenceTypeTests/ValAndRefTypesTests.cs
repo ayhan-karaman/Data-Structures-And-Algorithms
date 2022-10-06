@@ -1,7 +1,7 @@
 using ValueAndReferenceTypes;
 using Xunit;
 
-namespace ApplicationsTests.ValueAndRefrenceTypeTests;
+namespace Tests.ApplicationsTests.ValueAndRefrenceTypeTests;
 
 public class ValAndRefTypesTests
 {

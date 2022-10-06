@@ -3,7 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using DataStructures.Array;
 using Xunit;
-namespace ArrayTests
+namespace Tests.DataStructuresTests.ArrayTests
 {
     public class ArrayTests
     {

@@ -2,11 +2,11 @@ using System.Collections;
 
 namespace DataStructures.Array
 {
-    public class CustomeArrayEnumerator : IEnumerator
+    public class CustomArrayEnumerator : IEnumerator
     {
         private Object[] _array;
         private int index = -1;
-        public CustomeArrayEnumerator(Object[] array)
+        public CustomArrayEnumerator(Object[] array)
         {
             _array = array;
         }
