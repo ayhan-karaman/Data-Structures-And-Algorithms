@@ -1,6 +1,6 @@
 ﻿
 
-var arr =  Array.CreateInstance(typeof(int), 4);
+var arr =  System.Array.CreateInstance(typeof(int), 4);
 
 arr.SetValue(23, 0);
 arr.SetValue(44, 1);

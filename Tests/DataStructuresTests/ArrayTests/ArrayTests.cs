@@ -26,7 +26,7 @@ namespace Tests.DataStructuresTests.ArrayTests
         public void Check_Array_Constructor_With_Params()
         {
             // Arrange - Act
-            var arr = new Array(1, 2, 3, 4, 5);
+            var arr = new  DataStructures.Array.Array(1, 2, 3, 4, 5);
 
             //Assert
             Assert.Equal(5, arr.Length);
@@ -37,7 +37,7 @@ namespace Tests.DataStructuresTests.ArrayTests
         public void Get_and_Set_Values_in_Array()
         {
             //Arrange
-            var arr = new Array();
+            var arr = new DataStructures.Array.Array();
 
             // Act
             arr.SetValue(28, 0);
@@ -54,10 +54,10 @@ namespace Tests.DataStructuresTests.ArrayTests
         public void Array_Clone_Test()
         {
             //Arrenge
-            var arr = new Array(1, 2, 3);
+            var arr = new DataStructures.Array.Array(1, 2, 3);
 
             // Act
-            var clonedArr = (Array)arr.Clone(); // || as Array;
+            var clonedArr = (DataStructures.Array.Array)arr.Clone(); // || as Array;
 
             //Assert
             Assert.NotNull(clonedArr);
@@ -69,7 +69,7 @@ namespace Tests.DataStructuresTests.ArrayTests
         public void Array_GetEnumerator_Test()
         {
             //arrenge 
-            var arr = new Array(10, 20, 30);
+            var arr = new DataStructures.Array.Array(10, 20, 30);
             // act
             string str = "";
             foreach (var item in arr)
@@ -85,7 +85,7 @@ namespace Tests.DataStructuresTests.ArrayTests
         public void Array_Custom_GetEnumerator_Test()
         {
             //arrenge 
-            var arr = new Array(10, 20, 30);
+            var arr = new DataStructures.Array.Array(10, 20, 30);
             // act
             string str = "";
             foreach (var item in arr)
