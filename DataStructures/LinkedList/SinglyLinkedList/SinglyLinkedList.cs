@@ -1,10 +1,12 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace DataStructures.LinkedList.SinglyLinkedList
-{    public class SinglyLinkedList<T>
+{
+    public class SinglyLinkedList<T> :IEnumerable<T>
     {
         public SinglyLinkedListNode<T> Head { get; set; }
         public int Count { get; set; }
@@ -33,8 +35,21 @@ namespace DataStructures.LinkedList.SinglyLinkedList
                 return;
             }
              newNode.Next  = Head;
+             Head = newNode;
              Count++;
              return;
         }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            return new SinglyLinkedListEnumerator<T>(Head);
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public List<T> ToList() => new List<T>(this);
     }
 }
