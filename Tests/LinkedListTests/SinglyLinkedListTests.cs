@@ -127,6 +127,52 @@ namespace Tests.LinkedListTests
             // assert
             Assert.Throws<ArgumentException>(()=> _linkedList.AddAfter(node, 55));
         }
+        
+
+        [Fact]
+        public void RemoveFirst_Test()
+        {
+            // Act
+            _linkedList.RemoveFirst();
+            // Assert
+            Assert.Collection(_linkedList, item => Assert.Equal(item, 6));
+        }
+
+        [Fact]
+        public void RemoveFirst_Exception_Test()
+        {
+            // Act
+            _linkedList.RemoveFirst();
+            _linkedList.RemoveFirst();
+            
+            // Assert
+            Assert.Throws<Exception>(()=> _linkedList.RemoveFirst());
+        }
+
+        [Fact]
+        public void RemoveLast_Test()
+        {
+            // Act
+            var result =  _linkedList.RemoveLast();
+            // Assert
+            Assert.Collection(_linkedList, item => Assert.Equal(item, 8));
+            Assert.True(result is 6);
+        }
+
+        [Theory]
+        [InlineData(8)]
+        public void Remove_Test(int value)
+        {
+            // Arrange
+            _linkedList.AddFirst(10);
+            // Act
+            var result = _linkedList.Remove(value);
+            // Assert
+            Assert.Collection(_linkedList, 
+            item => Assert.Equal(item, 10),
+            item => Assert.Equal(item, 6));
+            Assert.Equal(result, value);
+        }
 
         [Fact]
         public void AddAfter_ArgumentNullException()
