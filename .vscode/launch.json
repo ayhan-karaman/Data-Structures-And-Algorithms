@@ -9,10 +9,10 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/UIs/LinkedListApp/bin/Debug/net6.0/LinkedListApp.dll",
+            "program": "${workspaceFolder}/UIs/StackApp/bin/Debug/net6.0/StackApp.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/UIs/LinkedListApp",
-            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/UIs/StackApp",
+            "console": "externalTerminal",
             "stopAtEntry": false
         },
         {

@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/UIs/LinkedListApp/LinkedListApp.csproj",
+                "${workspaceFolder}/UIs/StackApp/StackApp.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/UIs/LinkedListApp/LinkedListApp.csproj",
+                "${workspaceFolder}/UIs/StackApp/StackApp.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/UIs/LinkedListApp/LinkedListApp.csproj"
+                "${workspaceFolder}/UIs/LinkedListProblem/StackApp.csproj"
             ],
             "problemMatcher": "$msCompile"
         }
