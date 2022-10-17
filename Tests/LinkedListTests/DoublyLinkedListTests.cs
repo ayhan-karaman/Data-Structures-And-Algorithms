@@ -110,14 +110,86 @@ namespace Tests.LinkedListTests
             // Act & Assert
             Assert.Throws<ArgumentException>(()=> _linkedList.AddBefore(node, node.Value));
         }
+        
+        [Fact]
+        public void RemoveFirst_Test()
+        {
+            // Act
+            var result = _linkedList.RemoveFirst();
+            // Assert
+            Assert.Equal(result, 'a');
+            Assert.Collection(_linkedList, item => Assert.Equal(item, 'z'));
+        }
+        [Fact]
+        public void RemoveFirst_Exception_Test()
+        {
+            // Act
+            var result1 = _linkedList.RemoveFirst();
+            var result2 = _linkedList.RemoveFirst();
+            // Assert
+            Assert.Throws<Exception>(()=> _linkedList.RemoveFirst());
+        }
 
         [Fact]
-        public void Coutn_Test()
+        public void RemoveLast_Test()
+        {
+            // Act
+            var result = _linkedList.RemoveLast();
+            // Assert
+            Assert.Equal(result, 'z');
+            Assert.Collection(_linkedList, item => Assert.Equal(item, 'a'));
+        }
+        [Fact]
+        public void RemoveLast_Exception_Test()
+        {
+            // Act
+            var result1 = _linkedList.RemoveLast();
+            var result2 = _linkedList.RemoveLast();
+            // Assert
+            Assert.Throws<Exception>(()=> _linkedList.RemoveLast());
+        }
+
+        [Theory]
+        [InlineData('d')]
+        [InlineData('e')]
+        public void Remove_Test(char value)
+        {
+            // Arrenge
+            _linkedList.AddBefore(_linkedList.Head.Next , value);
+            // Act
+            var result = _linkedList.Remove(value);
+            // Assert
+            Assert.Equal(result, value);            
+        }
+
+        [Fact]
+        public void Remove_ArgumentException_Test()
+        {
+            // Act && Arrenge
+            Assert.Throws<ArgumentException>(() => _linkedList.Remove('d'));
+        }
+
+
+        [Fact]
+        public void Count_Test()
         {
             // act 
             int count = _linkedList.Count;
             // assert
             Assert.Equal(count, 2);
+        }
+        
+
+        [Fact]
+        public void ToList_Test()
+        {
+            // Act
+            var list = _linkedList.ToList();
+            // Assert
+            Assert.Collection(list, 
+            item => Assert.Equal(item, _linkedList.Head.Value),
+            item => Assert.Equal(item, _linkedList.Tail.Value)
+            );
         }
     }
 }
