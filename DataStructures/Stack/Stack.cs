@@ -4,8 +4,22 @@ using DataStructures.Stack.Contracts;
 namespace DataStructures.Stack;
 public class Stack<T> : IStack<T>
 {
-    private readonly Stack<T> _stack;
+    private readonly IStack<T> _stack;
     public int Count => _stack.Count;
+    public Stack(StackType type = StackType.LinkedList)
+    {
+        switch (type)
+        {
+            case StackType.LinkedList:
+                _stack = new LinkedListStack<T>();
+                break;
+            case StackType.Array:
+                _stack = new ArrayStack<T>();
+                break;
+            default:
+                throw new Exception("Undefined type!");
+        }
+    }
 
     public IEnumerator<T> GetEnumerator()
     {
@@ -30,5 +44,10 @@ public class Stack<T> : IStack<T>
     IEnumerator IEnumerable.GetEnumerator()
     {
         return GetEnumerator();
+    }
+
+    private void TypeOperation(StackType type)
+    {
+        
     }
 }

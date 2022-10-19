@@ -1,8 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using DataStructures.Stack;
+
 string message = "Selam";
 
-var stack = new ArrayStack<char>();
+var stack = new DataStructures.Stack.Stack<char>(DataStructures.Stack.StackType.Array);
 for (var i = 0; i < message.Length; i++)
 {
     stack.Push(message[i]);
