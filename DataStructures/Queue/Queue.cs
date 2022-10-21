@@ -8,6 +8,22 @@ namespace DataStructures.Queue
     {
         private readonly IQueue<T> _queue;
 
+        // Bu yapıcı method ile yapılan işlemin uygun olmadığını öğrendik, geçici çözüm odaklı çalışılmıştır.
+        public Queue(QueueType type = QueueType.LinkedListQueue)
+        {
+            switch (type)
+            {
+                case QueueType.ArrayQueue :
+                    _queue = new ArrayQueue<T>();
+                    break;
+                case QueueType.LinkedListQueue :
+                    _queue = new LinkedListQueue<T>();
+                    break;
+                default:
+                 throw new Exception("Unsupported Queue type");
+                 
+            }
+        }
         public int Count => _queue.Count;
 
         public T DeQueue()

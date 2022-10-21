@@ -1,30 +1,26 @@
-﻿using System;
 using DataStructures.Queue;
 using Xunit;
 
 namespace Tests.DataStructuresTests.ArrayTests
 {
-    public class ArrayQueueTests
+    public class LinkedListQueueTests
     {
-        private readonly ArrayQueue<int> _arrayQueue;
-
-
-        public ArrayQueueTests()
+        private readonly LinkedListQueue<int> _linkedListQueue;
+        public LinkedListQueueTests()
         {
-            _arrayQueue = new ArrayQueue<int>(new int[] { 10, 20, 30 });
+            _linkedListQueue = new LinkedListQueue<int>(new int[] {10, 20, 30});
         }
-
         [Fact]
         public void Count_Test()
         {
-            // act
-            var count = _arrayQueue.Count;
+            // Act
+            var count = _linkedListQueue.Count;
 
-            // assert
-            Assert.Equal(3, count);
+            // Assert
+            Assert.Equal(count, 3);
         }
 
-        [Theory]
+         [Theory]
         [InlineData(40)]
         [InlineData(50)]
         [InlineData(60)]
@@ -33,11 +29,11 @@ namespace Tests.DataStructuresTests.ArrayTests
         public void EnQueue_Tests(int value)
         {
             // act
-            _arrayQueue.EnQueue(value);
+            _linkedListQueue.EnQueue(value);
 
             // assert
-            Assert.Equal(4, _arrayQueue.Count);
-            Assert.Collection(_arrayQueue, 
+            Assert.Equal(4, _linkedListQueue.Count);
+            Assert.Collection(_linkedListQueue, 
             item => Assert.Equal(item, 10),
             item => Assert.Equal(item, 20),
             item => Assert.Equal(item, 30),
@@ -49,14 +45,14 @@ namespace Tests.DataStructuresTests.ArrayTests
         public void DeQueue_Test()
         {
             // Act
-           var result = _arrayQueue.DeQueue();
+           var result = _linkedListQueue.DeQueue();
             // Assert
             Assert.Equal(10, result);
-            Assert.Collection(_arrayQueue, 
+            Assert.Collection(_linkedListQueue, 
             item => Assert.Equal(item, 20),
             item => Assert.Equal(item, 30)
             );
-            Assert.Equal(2, _arrayQueue.Count);
+            Assert.Equal(2, _linkedListQueue.Count);
 
         }
 
@@ -64,35 +60,32 @@ namespace Tests.DataStructuresTests.ArrayTests
         public void DeQueue_EmptyQueueException_Test()
         {
             // Act
-            _arrayQueue.DeQueue();
-            _arrayQueue.DeQueue();
-            _arrayQueue.DeQueue();
+            _linkedListQueue.DeQueue();
+            _linkedListQueue.DeQueue();
+            _linkedListQueue.DeQueue();
             // Assert
-            Assert.Throws<EmptyQueueException>(() => _arrayQueue.DeQueue());
+            Assert.Throws<EmptyQueueException>(() => _linkedListQueue.DeQueue());
         }
 
         [Fact]
         public void Peek_Test()
         {
             // Act
-            var peek = _arrayQueue.Peek();
+            var peek = _linkedListQueue.Peek();
             // Assert
-            Assert.Equal(3, _arrayQueue.Count);
+            Assert.Equal(3, _linkedListQueue.Count);
             Assert.Equal(10, peek);
         }
+
         [Fact]
         public void Peek_EmptyQueueException_Test()
         {
             // Act
-            _arrayQueue.DeQueue();
-            _arrayQueue.DeQueue();
-            _arrayQueue.DeQueue();
-            var result = _arrayQueue.Peek();
+            _linkedListQueue.DeQueue();
+            _linkedListQueue.DeQueue();
+            _linkedListQueue.DeQueue();
             // Assert
-            Assert.Equal(result, default);
+            Assert.Throws<EmptyQueueException>(()=> _linkedListQueue.Peek());
         }
-
-        
     }
 }
-

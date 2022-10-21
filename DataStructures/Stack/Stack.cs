@@ -6,6 +6,7 @@ public class Stack<T> : IStack<T>
 {
     private readonly IStack<T> _stack;
     public int Count => _stack.Count;
+    // Bu yapıcı method ile yapılan işlemin uygun olmadığını öğrendik, geçici çözüm odaklı çalışılmıştır.
     public Stack(StackType type = StackType.LinkedList)
     {
         switch (type)
