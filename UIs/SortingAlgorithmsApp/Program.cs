@@ -2,8 +2,11 @@
 using SortingAlgorithms;
 int[] arr = {40, 20, 50, 10, 5, 60, 30};
 
+Console.WriteLine("Not Sorting Algorithms!");
 ScreenWrite(arr);
-BubbleSorting.Sort(arr);
+SelectionSorting.Sort(arr, Utilities.SortDirection.Descending);
+
+Console.WriteLine("Sorting Algorithms");
 ScreenWrite(arr);
 
 static void ScreenWrite<T>(T[] array)
