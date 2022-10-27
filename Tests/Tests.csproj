@@ -26,6 +26,7 @@
     <ProjectReference Include="..\DataStructures\LinkedList\LinkedList.csproj" />
     <ProjectReference Include="..\DataStructures\Stack\Stack.csproj" />
     <ProjectReference Include="..\DataStructures\Queue\Queue.csproj" />
+    <ProjectReference Include="..\DataStructures\Trees\Trees.csproj" />
   </ItemGroup>
 
 </Project>

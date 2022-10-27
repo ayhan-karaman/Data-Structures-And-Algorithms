@@ -5,6 +5,17 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "BinaryTreesApp",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/UIs/BinaryTreesApp/bin/Debug/net6.0/BinaryTreesApp.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "console": "integratedTerminal"
+        },
+        {
             "name": "SortingAlgorithmsApp",
             "type": "coreclr",
             "request": "launch",
