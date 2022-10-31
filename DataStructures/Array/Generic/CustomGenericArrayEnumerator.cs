@@ -9,12 +9,13 @@ namespace DataStructures.Array.Generic
     public class CustomGenericArrayEnumerator<T> : IEnumerator<T>
     {
         private T[] _array;
-        private int index = -1;
+        private int index;
         private int _position;
         public CustomGenericArrayEnumerator(T[] array, int position)
         {
             _array = array;
             _position = position;
+            index = -1;
 
         }
         public T Current =>  _array[index];
@@ -28,7 +29,7 @@ namespace DataStructures.Array.Generic
 
         public bool MoveNext()
         {
-            if(index < _position)
+            if(index < _array.Length -1)
             {
                 index++;
                 return true;

@@ -124,12 +124,12 @@ namespace DataStructures.Array.Generic
         public IEnumerator<T> GetEnumerator()
         {
              
-             return InnerArray.Take(position).GetEnumerator();
+             return new CustomGenericArrayEnumerator<T>(InnerArray, position);
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-           return new CustomGenericArrayEnumerator<T>(InnerArray, position);
+           return GetEnumerator();
         }
     }
 }
